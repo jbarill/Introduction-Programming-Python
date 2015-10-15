@@ -3,7 +3,7 @@
 monthlyPayment = 0
 loanAmount = 0
 interestRate = 0
-numberOfPayments = 0
+NofPayments = 0
 loanDurationInYears = 0
 
 #Ask the user for the values needed to calculate the monthly payments
@@ -17,11 +17,11 @@ loanAmount = float(strLoanAmount)
 interestRate = float(strInterestRate)
 
 #Since payments are once per month, number of payments is number of years for the loan * 12
-numberOfPayments = loanDurationInYears*12
+NofPayments = loanDurationInYears*12
 
 #Calculate the monthly payment based on the formula
-monthlyPayment = loanAmount * interestRate * (1+ interestRate) * numberOfPayments \
-    / ((1 + interestRate) * numberOfPayments -1)
+monthlyPayment = loanAmount * interestRate * (1+ interestRate) * NofPayments \
+    / ((1 + interestRate) * NofPayments -1)
 
 #provide the result to the user
 print("Your monthly payment will be " + str(monthlyPayment))
